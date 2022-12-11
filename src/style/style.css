@@ -37,6 +37,10 @@
     font-size: xxx-large;
   }
 }
+body {
+  min-height: 100vh;
+}
+
 .cocktails {
   max-width: 90%;
   text-align: center;
@@ -66,11 +70,6 @@
 
 .cocktails__barman img {
   max-width: 200px;
-}
-@media (width > 768px) {
-  .cocktails__barman img {
-    max-width: 300px;
-  }
 }
 
 .cocktails__buttons {

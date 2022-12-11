@@ -2,9 +2,6 @@
   &__barman {
     img {
       max-width: 200px;
-      @media (width > 768px) {
-        max-width: 300px;
-      }
     }
   }
 }
