@@ -55,6 +55,9 @@
   cursor: pointer;
   color: #14a691;
 }
+.cocktails__button.active {
+  color: #14a691;
+}
 
 .cocktails__barman img {
   max-width: 200px;

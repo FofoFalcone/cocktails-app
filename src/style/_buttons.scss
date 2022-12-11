@@ -10,5 +10,9 @@
       cursor: pointer;
       color: $ckt-text-color-hover;
     }
+
+    &.active {
+      color: $ckt-text-color-hover;
+    }
   }
 }

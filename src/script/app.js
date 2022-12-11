@@ -20,21 +20,29 @@ class CocktailsApp {
     return document.querySelectorAll('.cocktails__button');
   }
 
+  removeActiveClass(buttons) {
+    buttons.forEach((button) => {
+      button.classList.remove('active');
+    })
+  }
+
   findRecipe(data) {
     let thisApp = this;
     let buttons = this.buttonsList;
     buttons.forEach((button) => {
       button.addEventListener('click', (e) => {
         let btnIndex = e.target.dataset.index;
+        thisApp.removeActiveClass(buttons);
         thisApp.ingredientsList.textContent = ''; 
         thisApp.checkRecipe(thisApp, btnIndex, data)
-      }, true)
+      }, true);
     })
   }
 
   checkRecipe(thisApp, btnIndex, data) {
     for(let itemIndex in data) {
       if (itemIndex === btnIndex) {
+        thisApp.buttonsList[btnIndex].classList.add('active');
         thisApp.prepareRecipe(thisApp, data[itemIndex]);
       }
     }
