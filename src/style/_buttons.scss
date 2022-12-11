@@ -1,0 +1,14 @@
+.cocktails {
+  &__button {
+    font-family: $r700;
+    text-align: center;
+    background-color: $ckt-btn-color;
+    color: $ckt-text-color;
+    border-radius: 10px;
+    padding: 20px 0;
+    &:hover {
+      cursor: pointer;
+      color: $ckt-text-color-hover;
+    }
+  }
+}

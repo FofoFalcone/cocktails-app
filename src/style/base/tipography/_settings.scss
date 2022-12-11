@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Roboto Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto Black';
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/Roboto-Black.ttf);
+}
+
+$r300: 'Roboto Light';
+$r400: 'Roboto Regular';
+$r700: 'Roboto Bold';
+$r900: 'Roboto Black';
+
+:root {
+  font-family: $r400;
+}
+
+.cocktails {
+  &__index-title {
+    font-family: $r900;
+    font-size: xx-large;
+    text-transform: uppercase;
+    @media (width > 768px) {
+      font-size: xxx-large;
+    }
+  }
+}
