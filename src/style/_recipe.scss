@@ -1,8 +1,10 @@
 @keyframes showingredientsize {
   0% {
+    opacity: 0;
     transform: translateY(100%);
   }
   100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -72,6 +74,8 @@
     align-items: center;
     justify-content: center;
     font-family: $r400;
+    transform: translateY(100%);
+    opacity: 0;
     animation-name: showingredientsize;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;

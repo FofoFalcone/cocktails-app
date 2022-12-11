@@ -81,18 +81,22 @@
 
 @-webkit-keyframes showingredientsize {
   0% {
+    opacity: 0;
     transform: translateY(100%);
   }
   100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
 
 @keyframes showingredientsize {
   0% {
+    opacity: 0;
     transform: translateY(100%);
   }
   100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -166,6 +170,8 @@
   align-items: center;
   justify-content: center;
   font-family: "Roboto Regular";
+  transform: translateY(100%);
+  opacity: 0;
   -webkit-animation-name: showingredientsize;
           animation-name: showingredientsize;
   -webkit-animation-duration: 0.5s;

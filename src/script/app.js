@@ -65,8 +65,8 @@ class CocktailsApp {
     return partsTotal;
   }
 
-  createIngredient(thisApp, ingredientName, ingredientPart, partPercentage, ingredientColor) {
-    let ingredientHTML = '<div class="cocktails__ingredient" style="height:' + partPercentage + '%' + '; background-color:' + ingredientColor + '"><span>' + ingredientPart + ' part of ' + ingredientName + '</span></div>';
+  createIngredient(thisApp, ingredientName, ingredientPart, partPercentage, ingredientColor, timeout) {
+    let ingredientHTML = '<div class="cocktails__ingredient" style="animation-delay:' + timeout + 'ms; height:' + partPercentage + '%' + '; background-color:' + ingredientColor + '"><span>' + ingredientPart + ' part of ' + ingredientName + '</span></div>';
     thisApp.ingredientsList.insertAdjacentHTML("afterbegin", ingredientHTML);
   }
 
@@ -78,9 +78,7 @@ class CocktailsApp {
       let ingredientPart = ingredient.part;
       let partPercentage = (100 / partsTotal * ingredientPart);
       let ingredientColor = ingredient.color;
-      setTimeout(() => {
-        thisApp.createIngredient(thisApp, ingredientName, ingredientPart, partPercentage, ingredientColor);
-      }, timeout);
+      thisApp.createIngredient(thisApp, ingredientName, ingredientPart, partPercentage, ingredientColor, timeout);
       timeout += 500;
     }
   }
