@@ -59,7 +59,6 @@ class CocktailsApp {
 
   createIngredient(thisApp, ingredientName, ingredientPart, partPercentage, ingredientColor) {
     let ingredientHTML = '<div class="cocktails__ingredient" style="height:' + partPercentage + '%' + '; background-color:' + ingredientColor + '"><span>' + ingredientPart + ' part of ' + ingredientName + '</span></div>';
-    console.log(ingredientHTML);
     thisApp.ingredientsList.insertAdjacentHTML("afterbegin", ingredientHTML);
   }
 
@@ -80,7 +79,7 @@ class CocktailsApp {
 }
 
 async function generatecocktailsList() {
-  let dataJson = await fetch('../data.json');
+  let dataJson = await fetch('./src/data/data.json');
   dataJson = await dataJson.json();
   return dataJson;
 }
