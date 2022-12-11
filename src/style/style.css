@@ -42,6 +42,11 @@
   text-align: center;
   margin: auto;
 }
+@media (width > 991px) {
+  .cocktails {
+    max-width: 992px;
+  }
+}
 
 .cocktails__button {
   font-family: "Roboto Bold";
@@ -129,6 +134,7 @@
   width: 300px;
   height: 400px;
   margin: auto;
+  max-width: 100%;
 }
 .cocktails__recipe::after {
   content: "";

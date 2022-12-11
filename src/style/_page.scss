@@ -2,4 +2,7 @@
   max-width: 992px;
   text-align: center;
   margin: auto;
+  @media (width > 991px) {
+    max-width: 992px;
+  }
 }
